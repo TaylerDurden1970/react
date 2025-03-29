@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
+  },
+  "ignorePatterns": [
+    "node_modules/"
+  ],
+  // Исключаем node_modules
+  "overrides": [
+    {
+      "files": [
+        "./src/**/*.{ts,tsx}"
+      ],
+      // Проверьте этот шаблон
+      "rules": {
+        "react/jsx-filename-extension": [
+          1,
+          {
+            "extensions": [
+              ".tsx"
+            ]
+          }
+        ],
+        "import/prefer-default-export": "off",
+        // например, если хотите использовать named export
+        "react/react-in-jsx-scope": "off"
+        // если используете React 17+ с новой JSX трансформацией
+      }
+    }
+  ]
+}

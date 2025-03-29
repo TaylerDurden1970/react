@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom", "es6"],
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "include": [
+    "src/**/*.ts",   // Включаем все .ts файлы в папке src
+    "src/**/*.tsx",  // Включаем все .tsx файлы в папке src
+    "src/webpack/**/*.js"  // Включаем все .js файлы в папке src/webpack
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
